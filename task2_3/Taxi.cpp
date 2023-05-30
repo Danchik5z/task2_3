@@ -26,7 +26,6 @@ void Taxi::move(std::vector<Stop>& stops) {
         }
     }
 
-    // Load passengers at the current stop
     while (!currentStopObj.getPassengers().empty() && passengers.size() < capacity) {
         Passenger& passenger = const_cast<Passenger&>(currentStopObj.getPassengers()[0]);
         passengers.push_back(passenger);
